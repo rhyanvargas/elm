@@ -1,0 +1,205 @@
+
+
+html, body {
+  font-family: $font-family-base;
+  height: 100%;
+}
+
+body {
+  background: #111;
+  color: #FFF;
+  line-height: 1.4;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border-color: #4F4F4F;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+}
+
+a.btn-link {
+  color: #fff;
+  border-bottom: 2px #FFF solid;
+  display: inline-block;
+  font: 700 1em/1 $meta-font-family;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:link,
+  &:visited,
+  &:active {
+    border-bottom: 2px #FFF solid;
+    color: #fff;
+    text-decoration: none;
+  }
+  &:hover {
+    border-bottom: 2px $brand-primary-yellow solid;
+    color: $brand-primary-yellow;
+    text-decoration: none;
+  }
+  @media(max-width: $screen-sm-max){
+      margin-top: 30px;
+    }
+  }
+
+[data-href] {
+  cursor: pointer;
+}
+
+.parallax {
+  background-attachment: fixed;
+}
+
+html.turbolinks-progress-bar::before {
+  background-color: $brand-primary-yellow !important;
+  height: 4px !important;
+}
+
+blockquote {
+  border-left: none;
+  margin: 1em;
+}
+
+/* for all embeded videos */
+.embed-responsive-16by9 {
+  margin-bottom: 30px;
+}
+
+blockquote.brooks {
+  position: relative;
+  font-family: $font-family-base;
+  font-size: 1.25em;
+  line-height: 1.25;
+
+  footer {
+    font-family: $meta-font-family;
+    font-size: 0.5em;
+    padding-top: $padding-large-vertical;
+    padding-right: ($padding-large-vertical * 2);
+    text-align: right;
+    text-transform: uppercase;
+
+    &:before {
+      content: '\2015';
+    }
+  }
+  &:before {
+    content: '\201C';
+    position: absolute;
+    top: -0.15em;
+    left: -0.15em;
+    color: $brand-secondary-red;
+    font-size: 3em;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  blockquote.brooks {
+    font-size: 2em;
+    line-height: 1.1;
+    &:before {
+      left: -0.25em;
+    }
+  }
+}
+
+a.category {
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: capitalize;
+  &:hover {
+    text-decoration: none !important;
+  }
+  &::after {
+    content: "";
+    width: 30px;
+    display: block;
+    border-bottom: 1px solid $brand-secondary-white;
+    margin: 5px auto 0;
+  }
+}
+
+.panel-master {
+  min-height: 400px;
+  color: $brand-secondary-white;
+  background-color: $brand-secondary-gray;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  padding: 60px 340px 0 60px;
+  @media (max-width: $screen-sm-max) {
+   padding: 60px 90px 0;
+  }
+  @media (max-width: $screen-xs-max) {
+   padding: 60px 30px 0;
+  }
+  a {
+    display: block;
+    text-decoration: none !important;
+    line-height: 1;
+  }
+  small {
+    font: .4em $font-family-base;
+  }
+}
+
+// add reel to feature blog panel
+
+@media (min-width: $screen-sm-min) {
+  .panel-master::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: url('/img/film-reel-3.svg')-30px 100% no-repeat;
+    background-size: 100%;
+  }
+}
+
+.panel-master-heading {
+  font-size: 1.2em;
+  text-transform: capitalize;
+  &::after {
+    border-bottom: 1px solid $brand-secondary-white;
+    content: "";
+    display: block;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 30px;
+  }
+}
+
+.panel-master-body {
+  position: relative;
+  z-index: 2;
+  margin: 30px 0 120px;
+  font: 300 2.4em $headings-font-family;
+}
+
+.tweet-embed {
+  max-width: 500px;
+}
+
+.q {
+  font-style: italic;
+}

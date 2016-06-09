@@ -1,0 +1,135 @@
+
+
+.page-about {
+
+  .reel {
+    margin-top: -269px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .top {
+    margin-bottom: 80px;
+    font-size: 1.5em;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 110px;
+      width: 3px;
+      background: #000;
+      top: 15%;
+      left: -30px;
+    }
+  }
+
+  .profile {
+    margin-bottom: 10px;
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 100px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  p.text {
+    font: 400 1em $font-family-base;
+  }
+
+  h2.name {
+    font: 800 1.3em $font-family-base;
+    margin-bottom: 5px;
+  }
+
+  h3.title {
+    font: 400 1.1em $font-family-base;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  h1.head {
+    margin-top: 80px;
+    font: 300 2em $headings-font-family;
+    &::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: #000;
+      margin: 10px 0 60px -10px;
+    }
+  }
+
+  .clients {
+    margin-bottom: 150px;
+    .gallery-cell {
+      width: 100%;
+      min-height: 250px;
+      img {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .flickity-prev-next-button.previous {
+    left: -60px;
+    @extend .hidden-xs;
+  }
+
+  .flickity-prev-next-button.next {
+    right: -60px;
+    @extend .hidden-xs;
+  }
+
+  .quote {
+    position: relative;
+    background-color: $brand-primary-yellow;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    position: relative;
+    h1 {
+      font: 300 2em $headings-font-family;
+      padding-right: 5%;
+    }
+    @media (min-width: $screen-sm-max) {
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 5%;
+        background: #FFF;
+      }
+    }
+  }
+
+  .testimonial {
+    @extend .quote;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 1.3em;
+      text-align: right;
+      font-weight: bold;
+      padding-right: 20px;
+    }
+  }
+
+  .main-content {
+    background: #FFF;
+    color: #111;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font: 400 1em/1.5 $font-family-base;
+  }
+
+}

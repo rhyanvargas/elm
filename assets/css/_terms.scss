@@ -1,0 +1,26 @@
+
+
+.page-terms {
+  .content {
+    background: #FFF;
+    color: #111;
+    text-align: justify;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font: 400 1.3em/1.5 $font-family-base;
+    p, ul {
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #28323f;
+      border-bottom: .08em solid rgba(0,0,0,.1);
+      padding-bottom: .08em;
+      &:hover {
+        color: #111;
+        border: none;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.page-page {
+  .master-wrapper {
+    position: relative;
+  }
+  .master {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($brand-primary-black, .6);
+    }
+  }
+  .head-content {
+    position: relative;
+    width: 80%;
+    z-index: 3;
+    padding-bottom: 300px;
+    .category {
+      text-transform: capitalize;
+      display: inline-block;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #DDD;
+      font: 400 1.2em $font-family-base;
+    }
+    h1.page-title {
+      font: 300 4em $headings-font-family;
+      margin-bottom: 50px;
+    }
+    p {
+      font: 400 1.3em/1.5 $font-family-base;
+      color: #BBB;
+      border-bottom: 1px solid #DDD;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+    .meta {
+      display: block;
+      font: 400 .9em/1 $meta-font-family;
+      letter-spacing: 0.0625em;
+      text-transform: uppercase;
+      span {
+        font: 200 .9em/1 $meta-font-family;
+        padding-right: 7px;
+      }
+      > div {
+        margin-bottom: 5px;
+      }
+      time {
+        font: 200 .9em/1 $meta-font-family;
+      }
+    }
+  }
+  .content {
+    background: #FFF;
+    color: #111;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font: 400 1.3em/1.5 $font-family-base;
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
