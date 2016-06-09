@@ -1,6 +1,3 @@
-axis         = require 'axis'
-rupture      = require 'rupture'
-autoprefixer = require 'autoprefixer-stylus'
 js_pipeline  = require 'js-pipeline'
 css_pipeline = require 'css-pipeline'
 
@@ -9,12 +6,19 @@ module.exports =
 
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
-    css_pipeline(files: 'assets/css/*.styl')
+    css_pipeline(files: 'assets/css/*.scss')
   ]
 
-  stylus:
-    use: [axis(), rupture(), autoprefixer()]
-    sourcemap: true
+  scss:
+    includePaths: [
+      './assets/css/vendor'
+      './node_modules/'
+    ]
+    # outFile: './public/css/app.css'
+    outputStyle: 'nested' # nested (default), expanded, compact, compressed
+    sourceMap: true
+    sourceMapEmbed: true
+    # indentedSyntax: true
 
   'coffee-script':
     sourcemap: true
