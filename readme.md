@@ -1,19 +1,5 @@
 ## Early Light Media
 
-Moving earlylightmedia.com from Jekyll to Roots and Contentful.
+Moving [earlylightmedia.com](http://www.earlylightmedia.com) from [Jekyll](http://jekyllrb.com) to [Roots](http://roots.cx) and [Contentful](https://www.contentful.com).
 
-### Setup
-
-- make sure [node.js](http://nodejs.org) and [roots](http://roots.cx) are installed
-- clone this repo down and `cd` into the folder
-- run `npm install`
-- run `roots watch`
-- open localhost:1111 in your favorite browser
-
-### Deploying
-
-- If you just want to compile the production build, run `roots compile -e
-  production` and it will build to public.
-- To deploy your site with a single command, run `roots deploy -to XXX` with
-  `XXX` being whichever [ship](https://github.com/carrot/ship#usage) deployer
-  you want to use.
+[JAM stack](http://jamstack.org) all the way!
