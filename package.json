@@ -1,6 +1,8 @@
 {
   "name": "ELM",
   "description": "The Early Light Media website.",
+  "version": "0.0.0",
+  "author": "Tom Kraak";
   "dependencies": {
     "coffee-script": "1.x",
     "css-pipeline": "0.3.x",
