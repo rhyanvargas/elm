@@ -9,6 +9,7 @@
     "jstransformer-marked": "1.x",
     "marked": "^0.3.5",
     "node-sass": "^3.7.0",
+    "roots": "^5.0.0",
     "roots-contentful": "0.0.9"
   }
 }
