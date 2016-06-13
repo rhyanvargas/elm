@@ -1,8 +1,12 @@
-js_pipeline  = require 'js-pipeline'
 css_pipeline = require 'css-pipeline'
+js_pipeline  = require 'js-pipeline'
+contentful   = require 'roots-contentful'
+config       = require './contentful'
+marked       = require 'marked'
 
 module.exports =
   ignores: [
+    'contentful.coffee'
     'readme.md'
     '**/layout.*'
     '**/_*'
@@ -11,9 +15,13 @@ module.exports =
     'ship.*conf'
   ]
 
+  locals:
+    marked: marked
+
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
     css_pipeline(files: 'assets/css/*.scss')
+    contentful(config)
   ]
 
   scss:
