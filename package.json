@@ -3,6 +3,9 @@
   "description": "The Early Light Media website.",
   "version": "0.0.2",
   "author": "Tom Kraak",
+  "scripts": {
+    "start:dev": "source .env.secret && roots watch"
+  },
   "dependencies": {
     "coffee-script": "1.x",
     "css-pipeline": "0.3.x",
