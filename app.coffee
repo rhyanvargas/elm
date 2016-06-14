@@ -12,6 +12,7 @@ module.exports =
     '**/_*'
     '.gitignore'
     '.nvmrc'
+    '.netlify'
     'ship.*conf'
   ]
 
