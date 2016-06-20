@@ -1,0 +1,16 @@
+mixin header(color)
+  header.site-header
+    .container
+      button(type='button', class='nav-toggle')
+        span.sr-only Toggle Navigation
+        span.icon-bar.line-1
+        span.icon-bar.line-2
+        span.icon-bar.line-3
+
+      a(href='/', class='navbar-brand')
+        img(src='img/elm-logo-#{color}.svg'
+            alt='Early Light Media'
+            onerror="this.src='img/logo-#{color}.png';this.onerror=null;"
+            )
+
+      .hidden-xs
