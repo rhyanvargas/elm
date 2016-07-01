@@ -1,0 +1,26 @@
+extends _default
+  
+block body
+  body.page-post
+    .master-wrapper
+      div(
+        class='master parallax'
+        data-img-mobile='{{ page.image-mobile }}'
+        style='background-image:url(#{asset(entry.image)})'
+      )
+        block nav
+          +nav()
+        block header
+          +header('yellow')
+        block post-header
+          include ../includes/_post-head 
+
+    block content
+      .content
+        .container
+          .row
+            .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
+              != marked(entry.content)
+    block footer
+      include ../includes/_social-icons.svg
+  
