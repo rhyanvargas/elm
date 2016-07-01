@@ -6,4 +6,8 @@ block content
   ul
     - for post in contentful.posts
       li
-        h4: a(href= post._url.replace(/.html$/,""))= post.title
+        h2: a(href= post._url.replace(/.html$/,""))= post.title
+        if post.author
+          h4 #{post.author[0].fields.name}
+        else
+          h4 No author specified!
