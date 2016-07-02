@@ -44,7 +44,7 @@
     @media(min-width: $screen-md-min) {
       span {
         &:after{
-        content: "."
+        content: "\002E\0020" // full stop & space
         }
       }
     }
