@@ -3,6 +3,7 @@ js_pipeline  = require 'js-pipeline'
 contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
+moment       = require 'moment'
 roots_yaml   = require 'roots-yaml'
 
 module.exports =
@@ -19,6 +20,7 @@ module.exports =
 
   locals:
     marked: marked
+    moment: moment
 
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
