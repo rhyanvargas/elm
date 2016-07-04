@@ -23,5 +23,5 @@
                     | No author specified!
                 .col-md-2
                   time.meta-date
-                  | #{entry.date}
+                  | #{moment(entry.date).format("MMM D, YYYY")}
 .span.scrolltomain.hidden-xs.hidden-sm
