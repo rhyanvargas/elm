@@ -6,15 +6,15 @@ doctype html
 <!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
 <!--[if IE 9]><html class="no-js ie9 oldie" lang="en"><![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
 include ../includes/_head
-block body
-  body
-    block nav
-      +nav()
-    block header
+
+  body(id= helpers.getPageName(_path))
+    +nav()
+    .page-wrapper
       +header('yellow')
 
-    block content
+      block content
   
     block footer
       include ../includes/_social-icons.svg
