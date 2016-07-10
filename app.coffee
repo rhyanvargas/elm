@@ -16,6 +16,7 @@ module.exports =
     '.nvmrc'
     '.netlify'
     'ship.*conf'
+    'helpers/**'
   ]
 
   locals:
