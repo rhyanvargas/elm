@@ -1,28 +1,27 @@
-extends _default
+include ../mixins/_nav
+include ../mixins/_header
+
+doctype html
+include ../includes/_ie-conditional-comments
+include ../includes/_head
   
-block body
-  body.page-post
+  body(id='post')
+  
     .master-wrapper
       div(
         class='master parallax'
         data-img-mobile='{{ page.image-mobile }}'
         style='background-image:url(#{asset(entry.image)})'
       )
-        block nav
-          +nav()
-        block header
-          +header('yellow')
-        block post-header
-          include ../includes/_post-head 
-
-    block content
-      .content
-        .container
-          .row
-            .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
-              != marked(entry.content)
-              include ../includes/_twitter-post-feedback
-    block footer
-      include ../includes/_footer
-      include ../includes/_social-icons.svg
+        +nav()
+        +header('yellow')
+        include ../includes/_post-head 
+    .content
+      .container
+        .row
+          .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
+            != marked(entry.content)
+            include ../includes/_twitter-post-feedback
+    include ../includes/_footer
+    include ../includes/_social-icons.svg
   
