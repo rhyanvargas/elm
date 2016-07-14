@@ -5,6 +5,6 @@ module.exports =
   content_types:
     posts:
       id: 'blog'
-      template: 'views/layouts/_post.jade'
+      template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       #filters: {}
