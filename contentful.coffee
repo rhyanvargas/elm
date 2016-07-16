@@ -27,3 +27,5 @@ module.exports =
     road:
       id: 'blog'
       filters: {'limit': '1', 'fields.category.sys.id': '4nMklZwz2oA4Uc0mCMiciy'}
+    quotes:
+      id: 'quote'
