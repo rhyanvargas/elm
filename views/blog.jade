@@ -1,13 +1,20 @@
+include ./mixins/_header
 extends ./_layouts/_default
 
-block content
-  h3 ELM Posts 
+block header
+  +header('white')
 
-  ul
-    - for post in contentful.posts
-      li
-        h2: a(href= post._url.replace(/.html$/,""))= post.title
-        if post.author
-          h4 #{post.author[0].fields.name}
-        else
-          h4 No author specified!
+block content
+  //- featured posts are limited to 1 ... so why iterate?
+  - for post in contentful.featured_post
+    - var category = post.category.fields.title
+    - var permalink = post._url.replace(/.html$/,"") 
+    .container
+      .page-blog-landing
+        .panel-master
+          a(class='panel-master-heading', href='/blog/#{category}')= category
+          .panel-master-body
+            a(href= permalink)= post.title
+              br
+              small= post.boxTitle
+      
