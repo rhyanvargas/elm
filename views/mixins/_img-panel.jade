@@ -1,0 +1,13 @@
+mixin img-panel()
+  - var postTitle = contentful.method[0].title
+  - var postSubTitle = contentful.method[0].boxTitle
+  - var category = contentful.method[0].category.fields.title
+  - var permalink = contentful.method[0]._url.replace(/.html$/,"") 
+  - var panelImage = contentful.method[0].imageBox
+  .panel-common.panel-box-img(style='background-image:url(#{asset(panelImage)})')
+    .panel-box-1-heading
+      a(href='/blog/#{category}')= category
+    .panel-box-1-body
+      a(href= permalink)
+        span.title= postTitle
+        span.text= postSubTitle
