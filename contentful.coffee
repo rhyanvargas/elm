@@ -20,6 +20,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
+                'order': '-sys.createdAt',
                 'limit': '1',
                 'fields.category.sys.id': '57xrbtbFZuYsO4qGY2Y2q0'
                }
@@ -28,6 +29,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
+                'order': '-sys.createdAt',
                 'limit': '1',
                 'fields.category.sys.id': '2xx0FKPSRmm0cKEu2SGMkK'
                }
@@ -36,6 +38,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
+                'order': '-sys.createdAt',
                 'limit': '1',
                 'fields.category.sys.id': '6EfFP66ZckS2OYWa8u28EG'
                }
@@ -53,6 +56,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
+                'order': '-sys.createdAt',
                 'limit': '1',
                 'fields.category.sys.id': '4nMklZwz2oA4Uc0mCMiciy'
                }
