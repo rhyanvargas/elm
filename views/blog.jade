@@ -1,5 +1,6 @@
 include ./mixins/_header
 include ./mixins/_split-panel
+include ./mixins/_img-panel
 extends ./_layouts/_default
 
 block header
@@ -29,3 +30,5 @@ block content
                 span.author= contentful.quotes[0].author
           .col-md-4
             +split-panel()
+          .col-md-4
+            +img-panel()
