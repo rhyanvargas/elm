@@ -1,4 +1,5 @@
 include ./mixins/_header
+include ./mixins/_feature-panel
 include ./mixins/_quote-panel
 include ./mixins/_split-panel
 include ./mixins/_img-panel
@@ -8,23 +9,13 @@ block header
   +header('white')
 
 block content
-  //- featured posts are limited to 1 ... so why iterate?
-  - for post in contentful.featured_post
-    - var category = post.category.fields.title
-    - var permalink = post._url.replace(/.html$/,"") 
-    .container
-      .page-blog-landing
-        .panel-master
-          a(class='panel-master-heading', href='/blog/#{category}')= category
-          .panel-master-body
-            a(href= permalink)= post.title
-              br
-              small= post.boxTitle
-  
-        .row.post-list
-          .col-md-4
-            +quote-panel()
-          .col-md-4
-            +split-panel()
-          .col-md-4
-            +img-panel()
+  .container
+    .page-blog-landing
+      +feature-panel()
+      .row.post-list
+        .col-md-4
+          +quote-panel()
+        .col-md-4
+          +split-panel()
+        .col-md-4
+          +img-panel()
