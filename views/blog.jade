@@ -3,6 +3,7 @@ include ./mixins/_feature-panel
 include ./mixins/_quote-panel
 include ./mixins/_split-panel
 include ./mixins/_img-panel
+include ./mixins/_color-panel
 extends ./_layouts/_default
 
 block header
@@ -22,3 +23,8 @@ block content
       .row-post-list
         .col-md-6
           +img-panel('road')
+        .col-md-6
+          +color-panel()
+      .row-post-list
+        .col-md-4.video-sibling
+          +img-panel('gear')

@@ -1,0 +1,12 @@
+mixin color-panel()
+  - var postTitle = contentful.culture[0].title
+  - var postSubTitle = contentful.culture[0].boxTitle
+  - var category = contentful.culture[0].category.fields.title
+  - var permalink = contentful.culture[0]._url.replace(/.html$/,"") 
+  .panel-common.panel-box-color
+    .panel-box-1-heading
+      a(href='/blog/#{category}')= category
+    .panel-box-1-body
+      a(href= permalink)
+        span.title= postTitle
+        span.text= postSubTitle
