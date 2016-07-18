@@ -1,0 +1,16 @@
+mixin pick-panel()
+  .panel-common.panel-box-2
+    .panel-box-2-heading
+      h3 ELM Picks
+    .panel-box-2-body
+      br
+      br
+      - for pick, index in contentful.picks
+        - var postTitle = pick.pickedPost.fields.title 
+        - var postDate = pick.pickedPost.fields.date
+        - var permalink = pick.pickedPost.fields.permalink
+          a(href='/blog/#{permalink}')
+            span.title= postTitle 
+            small #{moment(postDate).format("MMM D, YYYY")}
+          unless index == 2
+            hr

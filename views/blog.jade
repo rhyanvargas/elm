@@ -5,6 +5,7 @@ include ./mixins/_split-panel
 include ./mixins/_img-panel
 include ./mixins/_color-panel
 include ./mixins/_vimeo-player
+include ./mixins/_pick-panel.jade
 extends ./_layouts/_default
 
 block header
@@ -31,3 +32,6 @@ block content
           +img-panel('gear')
         .col-md-8
           +vimeo-player(126620571) 
+      .row-post-list
+        .col-md-4
+          +pick-panel()
