@@ -1,8 +1,19 @@
-mixin color-panel()
-  - var postTitle = contentful.culture[0].title
-  - var postSubTitle = contentful.culture[0].boxTitle
-  - var category = contentful.culture[0].category.fields.title
-  - var permalink = contentful.culture[0]._url.replace(/.html$/,"") 
+mixin color-panel(category)
+  - var category = category
+  case category
+    when 'culture'
+      - var postTitle = contentful.culture[0].title
+      - var postSubTitle = contentful.culture[0].boxTitle
+      - var category = contentful.culture[0].category.fields.title
+      - var permalink = contentful.culture[0]._url.replace(/.html$/,"") 
+    when 'animation'
+      - var postTitle = contentful.animation[0].title
+      - var postSubTitle = contentful.animation[0].boxTitle
+      - var category = contentful.animation[0].category.fields.title
+      - var permalink = contentful.animation[0]._url.replace(/.html$/,"") 
+      - var panelImage = contentful.animation[0].imageBox
+    default
+      p Please pass a category to the mixin.
   .panel-common.panel-box-color
     .panel-box-1-heading
       a(href='/blog/#{category}')= category
