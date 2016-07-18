@@ -7,6 +7,7 @@ module.exports =
       id: 'blog'
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
+      write: '/data/posts.json'
     featured_post:
       id: 'blog'
       template: 'views/_layouts/_post.jade'
@@ -63,3 +64,7 @@ module.exports =
     quotes:
       id: 'quote'
       filters: {'order': '-sys.createdAt'}
+    picks:
+      id: 'picks'
+      filter: {'limit': '3'}
+      write: '/data/picks.json'
