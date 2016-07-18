@@ -8,9 +8,11 @@ include ../includes/_head
   body(id= helpers.getPageName(_path))
     +nav()
     .page-wrapper
-      +header('yellow')
+      block header
+        +header('yellow')
 
       block content
   
     block footer
+      include ../includes/_footer
       include ../includes/_social-icons.svg

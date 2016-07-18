@@ -1,0 +1,11 @@
+mixin feature-panel()
+  - var postTitle = contentful.featured_post[0].title
+  - var postSubTitle = contentful.featured_post[0].boxTitle
+  - var category = contentful.featured_post[0].category.fields.title
+  - var permalink = contentful.featured_post[0]._url.replace(/.html$/,"") 
+    .panel-master
+      a(class='panel-master-heading', href='/blog/#{category}')= category
+      .panel-master-body
+        a(href= permalink)= postTitle
+          br
+          small= postSubTitle 
