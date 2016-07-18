@@ -4,6 +4,7 @@ include ./mixins/_quote-panel
 include ./mixins/_split-panel
 include ./mixins/_img-panel
 include ./mixins/_color-panel
+include ./mixins/_vimeo-player
 extends ./_layouts/_default
 
 block header
@@ -28,3 +29,5 @@ block content
       .row-post-list
         .col-md-4.video-sibling
           +img-panel('gear')
+        .col-md-8
+          +vimeo-player(126620571) 
