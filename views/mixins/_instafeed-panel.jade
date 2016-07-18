@@ -1,0 +1,26 @@
+mixin instafeed-panel()
+  .panel-common.panel-box-2.panel-instagram
+    .panel-box-2-heading
+      h3 Instagram
+        a(
+          href='https://www.instagram.com/earlylightmedia'
+          target='_blank'
+         )  @earlylightmedia
+     .panel-box-body
+       .instafeed#instafeed
+       script.
+         var userFeed = new Instafeed({
+           get: 'user',
+           userId: 355779379,
+           accessToken: '355779379.f8ae3ae.4e327c3f61c143d480557fd855d1a64f',
+           clientId: 'f8ae3ae94d7a4a5ca7ff0a0f69621a6d',
+           limit: 6
+           });
+           userFeed.run();
+       .panel-instagram-footer
+          a(
+            href='https://www.instagram.com/earlylightmedia'
+            class='btn btn-primary btn-block'
+            target='_blank'
+           ) Follow
+

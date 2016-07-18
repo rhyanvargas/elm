@@ -6,6 +6,7 @@ include ./mixins/_img-panel
 include ./mixins/_color-panel
 include ./mixins/_vimeo-player
 include ./mixins/_pick-panel.jade
+include ./mixins/_instafeed-panel.jade
 extends ./_layouts/_default
 
 block header
@@ -37,3 +38,5 @@ block content
           +pick-panel()
         .col-md-4
           +color-panel('animation')
+        .col-md-4
+          +instafeed-panel()
