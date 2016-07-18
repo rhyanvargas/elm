@@ -16,6 +16,15 @@ module.exports =
                 'limit': '1',
                 'fields.feature': 'true'
                }
+    animation:
+      id: 'blog'
+      template: 'views/_layouts/_post.jade'
+      path: (entry) -> "blog/#{entry.permalink}"
+      filters: {
+                'order': '-sys.createdAt',
+                'limit': '1',
+                'fields.category.sys.id': '5607jfwr8QYki6IcUiueCY'
+               }
     culture:
       id: 'blog'
       template: 'views/_layouts/_post.jade'
