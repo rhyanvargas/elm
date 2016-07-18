@@ -1,13 +1,44 @@
-extends ./layouts/_default
+include ./mixins/_header
+include ./mixins/_feature-panel
+include ./mixins/_quote-panel
+include ./mixins/_split-panel
+include ./mixins/_img-panel
+include ./mixins/_color-panel
+include ./mixins/_vimeo-player
+include ./mixins/_pick-panel.jade
+include ./mixins/_instafeed-panel.jade
+include ./mixins/_cn-nav.jade
+extends ./_layouts/_default
+
+block header
+  +header('white')
 
 block content
-  h3 ELM Posts 
-
-  ul
-    - for post in contentful.posts
-      li
-        h2: a(href= post._url.replace(/.html$/,""))= post.title
-        if post.author
-          h4 #{post.author[0].fields.name}
-        else
-          h4 No author specified!
+  .container
+    .page-blog-landing
+      +feature-panel()
+      .row.post-list
+        .col-md-4
+          +quote-panel()
+        .col-md-4
+          +split-panel()
+        .col-md-4
+          +img-panel('method')
+      .row-post-list
+        .col-md-6
+          +img-panel('road')
+        .col-md-6
+          +color-panel('culture')
+      .row-post-list
+        .col-md-4.video-sibling
+          +img-panel('gear')
+        .col-md-8
+          +vimeo-player(126620571) 
+      .row-post-list
+        .col-md-4
+          +pick-panel()
+        .col-md-4
+          +color-panel('animation')
+        .col-md-4
+          +instafeed-panel()
+      +cn-nav()

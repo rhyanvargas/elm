@@ -1,0 +1,8 @@
+mixin vimeo-player(id)
+  .embed-responsive.embed-responsive-16by9
+    iframe(
+           src='https://player.vimeo.com/video/#{id}'
+           webkitallowfullscreen
+           mozallowfullscreen
+           allowfullscreen
+          )

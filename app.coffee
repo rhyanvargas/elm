@@ -16,11 +16,14 @@ module.exports =
     '.nvmrc'
     '.netlify'
     'ship.*conf'
+    'helpers/**'
   ]
 
   locals:
     marked: marked
     moment: moment
+    helpers:
+      getPageName: require './helpers/get-page-name.js'
 
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
