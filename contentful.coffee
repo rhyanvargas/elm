@@ -14,7 +14,8 @@ module.exports =
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
                 'limit': '1',
-                'fields.feature': 'true'
+                'fields.feature': 'true',
+                'order': '-sys.createdAt'
                }
     animation:
       id: 'blog'
