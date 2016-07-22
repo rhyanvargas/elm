@@ -1,5 +1,4 @@
-$(document).on "page:change", ->
-
+ready = ->
   $(".nav-toggle").on "click", ->
     $el = $(this)
     $nav = $("#navbar")
@@ -59,3 +58,4 @@ $(document).on "page:change", ->
       if $w.width() >= 768 and $w.width() < 992 and img.length
         $el.css
           backgroundImage: "url('/img/work/" + img + "')"
+$(document).ready(ready);
