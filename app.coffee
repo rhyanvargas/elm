@@ -24,6 +24,7 @@ module.exports =
     moment: moment
     helpers:
       getPageName: require './helpers/get-page-name.js'
+      buildEmbed:  require './helpers/build-embed.js'
 
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
