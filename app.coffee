@@ -4,6 +4,7 @@ contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
 moment       = require 'moment'
+renderer     = require './helpers/md-image'
 roots_yaml   = require 'roots-yaml'
 
 module.exports =
@@ -21,6 +22,7 @@ module.exports =
 
   locals:
     marked: marked
+    renderer: renderer
     moment: moment
     helpers:
       getPageName: require './helpers/get-page-name.js'
