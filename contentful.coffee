@@ -26,8 +26,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
-                'order': '-sys.createdAt',
-                'limit': '1',
+                'order': '-fields.date',
                 'fields.category.sys.id': '5607jfwr8QYki6IcUiueCY'
                }
       transform: transform
@@ -36,8 +35,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
-                'order': '-sys.createdAt',
-                'limit': '1',
+                'order': '-fields.date',
                 'fields.category.sys.id': '57xrbtbFZuYsO4qGY2Y2q0'
                }
       transform: transform
@@ -46,8 +44,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
-                'order': '-sys.createdAt',
-                'limit': '1',
+                'order': '-fields.date',
                 'fields.category.sys.id': '2xx0FKPSRmm0cKEu2SGMkK'
                }
       transform: transform
@@ -56,8 +53,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
-                'order': '-sys.createdAt',
-                'limit': '1',
+                'order': '-fields.date',
                 'fields.category.sys.id': '6EfFP66ZckS2OYWa8u28EG'
                }
       transform: transform
@@ -75,8 +71,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
-                'order': '-sys.createdAt',
-                'limit': '1',
+                'order': '-fields.date',
                 'fields.category.sys.id': '4nMklZwz2oA4Uc0mCMiciy'
                }
       transform: transform
