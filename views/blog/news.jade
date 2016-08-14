@@ -1,5 +1,4 @@
 include ../mixins/_header
-include ../mixins/_split-panel
 include ../mixins/_cn-nav.jade
 extends ../_layouts/_default
 
@@ -15,14 +14,14 @@ block content
           .col-md-4
             - var postTitle = post.title
             - var postSubTitle = post.boxTitle
-            - var postDate = post.date
+            - var postDate = moment(post.date).format("MMM D, YYYY")
             - var permalink = post._url.replace(/.html$/,"") 
             - var panelImage = post.imageBox
             .panel-common
               .panel-box-1-heading-img(style='background-image:url(#{asset(panelImage)})')
               .panel-box-1-body
                 a(href= permalink)
-                  small #{moment(postDate).format("MMM D, YYYY")}
+                  small= postDate
                   span.title= postTitle
                   span.text= postSubTitle
       +cn-nav()
