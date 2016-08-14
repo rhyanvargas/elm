@@ -66,8 +66,7 @@ module.exports =
       template: 'views/_layouts/_post.jade'
       path: (entry) -> "blog/#{entry.permalink}"
       filters: {
-                'order': '-sys.createdAt',
-                'limit': '1',
+                'order': '-fields.date',
                 'fields.category.sys.id': '5o9c9wcypUEoOUSSmak8mM'
                }
       transform: transform
