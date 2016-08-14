@@ -8,17 +8,17 @@ block header
 block content
   .container
     .page-blog-landing
-      h2 News
+      h2 Road
       .row
-        - for post in contentful.news
-          .col-md-4
+        - for post in contentful.road
+          .col-md-6
             - var postTitle = post.title
             - var postSubTitle = post.boxTitle
             - var postDate = moment(post.date).format("MMM D, YYYY")
             - var permalink = post._url.replace(/.html$/,"") 
             - var panelImage = post.imageBox
-            .panel-common
-              .panel-box-1-heading-img(style='background-image:url(#{asset(panelImage)})')
+            .panel-common.panel-box-img(style='background-image:url(#{asset(panelImage)})')
+              .panel-box-1-heading
               .panel-box-1-body
                 a(href= permalink)
                   small= postDate
